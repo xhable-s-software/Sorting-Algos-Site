@@ -1,0 +1,279 @@
+{% load static %}
+
+<html>
+
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Алгоритмы сортировки данных</title>
+
+  <!-- jQuery 1.8 or later, 33 KB -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!-- Semantic UI -->
+  <script src="{% static 'ui/semantic.min.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'ui/semantic.min.css' %}">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/masthead.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/acrylic.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+
+  <!-- JS -->
+  <script src="{% static 'js/index.js' %}"></script>
+  <script src="{% static 'js/tablesort.js' %}"></script>
+
+  <!-- Подсветка синтаксиса -->
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> -->
+  <!-- <script src="https://semantic-ui.com/javascript/library/highlight.min.js"></script> -->
+
+  <!-- <link rel="stylesheet" href="{% static 'css/hljs-github-dark.css' %}"> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/python.min.js"></script> -->
+  <!-- <script src="{% static 'js/highlight.js' %}"></script> -->
+  <script>hljs.highlightAll();</script>
+
+
+  <!-- AJAX Gist -->
+  <script src="{% static 'js/jquery.ajax-gist.js' %}"></script>
+
+
+
+</head>
+
+<body class="pushable">
+  <!-- Following Menu -->
+  <div class="ui large top fixed hidden menu">
+    <div class="ui container">
+      <a class="header item" href="#home" onclick="ScrollTo()">Главная</a>
+      <a class="item" href="#types" onclick="ScrollTo()">Типы сортировок</a>
+      <!-- <div class="right menu">
+                <div class="item">
+                    <a class="ui primary button" href="#enrol" onclick="ScrollTo()">Записаться</a>
+                </div>
+            </div> -->
+    </div>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <div class="ui vertical inverted sidebar menu">
+    <a class="active item" href="#home" onclick="ScrollTo()">Главная</a>
+    <a class="item" href="#types" onclick="ScrollTo()">Типы сортировок</a>
+    <a class="item" href="#enrol" onclick="ScrollTo()">Записаться</a>
+  </div>
+
+
+  <!-- Page Contents -->
+  <a id="home"></a>
+  <div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment">
+
+      <div class="ui container">
+        <div class="ui large secondary inverted pointing menu">
+          <a class="toc item">
+            <i class="sidebar icon"></i>
+          </a>
+          <a class="active item" href="#home" onclick="ScrollTo()">Главная</a>
+          <a class="item" href="#types" onclick="ScrollTo()">Типы сортировок</a>
+          <!-- <div class="right item">
+                <a class="ui inverted button" href="#enrol" onclick="ScrollTo()">Записаться</a>
+            </div> -->
+        </div>
+      </div>
+
+      <div class="ui text container">
+        <h1 class="ui inverted header">
+          Алгоритмы сортировки данных
+        </h1>
+        <h2 class="ui inverted header">Обзорная страница алгоритмов сортировки данных</h2>
+        <h4 class="ui inverted sub header">Згурский Евгений, Матвеев Сергей</h4>
+        <a class="ui huge primary button" href="#table" onclick="ScrollTo()">Перейти к таблице <i
+            class="right arrow icon"></i></a>
+      </div>
+    </div>
+
+
+
+    <!-- Типы сортировок -->
+    <a id="types"></a>
+    <h4 class="ui inverted horizontal divider header ">
+      <i class="archive icon"></i>
+      Типы сортировок
+    </h4>
+
+    <div class="ui centered container m2">
+      <div class="ui three column centered stackable grid">
+        <div class="column">
+          <div class="ui raised acrylic segment">
+            <h3 class="ui header">
+              <i class="exchange icon"></i>
+              Сортировки обменами
+            </h3>
+            <div class="ui divider"></div>
+            <p>
+              Являются самым популярным типом сортировок.<br><br>
+              Идея всех алгоритмов сортировки обменами выглядит примерно так:<br>
+              1. Попарно сравниваются элементы массива;<br>
+              2. Если элемент слева больше элемента справа, то элементы меняются местами;<br>
+              3. Повторяем пункты 1-2 до тех пор, пока массив не отсортируется.<br><br><br><br>
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="ui raised acrylic segment">
+            <h3 class="ui header">
+              <i class="crosshairs icon"></i>
+              Сортировки выбором
+            </h3>
+            <div class="ui divider"></div>
+            <p>
+              Их преимуществом является более высокая скорость работы на частично отсортированных
+              данных.<br><br>
+              Обобщённо их можно свести к следующему алгоритму:<br>
+              1. В неотсортированном подмассиве ищется локальный максимум (минимум).<br>
+              2. Найденный максимум (минимум) меняется местами с последним (первым) элементом в
+              подмассиве.<br>
+              3. Если в массиве остались неотсортированные подмассивы, см. пункт 1.
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="ui raised acrylic segment">
+            <h3 class="ui header">
+              <i class="sign-in icon"></i>
+              Сортировки вставками
+            </h3>
+            <div class="ui divider"></div>
+            <p>
+              Преимуществом сортировок вставками является лучшее <br><br>
+              Идея всех алгоритмов сортировки обменами выглядит примерно так:<br>
+              1. Попарно сравниваются элементы массива;<br>
+              2. Если элемент слева больше элемента справа, то элементы меняются местами;<br>
+              3. Повторяем пункты 1-2 до тех пор, пока массив не отсортируется.<br><br><br><br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Сводная таблица -->
+    <a id="table"></a>
+    <h4 class="ui inverted horizontal divider header">
+      <i class="table icon"></i>
+      Сводная таблица
+    </h4>
+
+    <div class="ui centered container m2">
+      <table class="ui sortable selectable celled pink table">
+        <thead>
+
+          <tr>
+            <th>Название</th>
+            <th>Тип</th>
+            <th>Сложность</th>
+            <th>Время работы, мс</th>
+            <th>n итераций</th>
+            <th>n перестановок</th>
+            <th>n строк кода</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for algo in algos %}
+          <tr>
+            <td>
+              <a class="" algo_name="{{ algo.name }}" href="/profile/{{ algo.pk }}">{{ algo.name }}</a>
+              <!-- <div class="ui animated fade fluid basic violet button algo_name_link" algo_name="{{ algo.name }}"
+                tabindex="0">
+                <div class="visible content">{{ algo.name }}</div>
+                <div class="hidden content">
+                  Посмотреть код
+                </div>
+              </div> -->
+            </td>
+            <td>{{ algo.type }}</td>
+            <td>{{ algo.complexity }}</td>
+            <td>{{ algo.time }}</td>
+            <td>{{ algo.iter_count }}</td>
+            <td>{{ algo.replacements_count }}</td>
+            <td>{{ algo.code_lines_count }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        <tfoot class="full-width">
+          <tr>
+            <th colspan="4">
+              <div class="ui labeled input">
+                <div class="ui label">Массив отсортирован на</div>
+                <select class="ui compact selection dropdown" id="select_sort_percentage">
+                  <option selected="" value="0">0%</option>
+                  <option value="10">10%</option>
+                  <option value="25">25%</option>
+                  <option value="33">33%</option>
+                  <option value="50">50%</option>
+                  <option value="75">75%</option>
+                  <option value="90">90%</option>
+                </select>
+              </div>
+            </th>
+            <th colspan="3">
+              <div class="ui labeled input">
+                <div class="ui label">Кол-во элементов</div>
+                <select class="ui compact selection dropdown" id="select_item_count">
+                  <option selected="" value="500">500</option>
+                  <option value="1000">1000</option>
+                  <option value="2500">2500</option>
+                  <option value="5000">5000</option>
+                </select>
+              </div>
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+    <!-- Модальное окно -->
+    <div class="ui modal">
+      <div class="ui icon header">
+        <i class="code icon"></i>
+        Сниппет кода
+      </div>
+
+
+      <div id="modal-content"></div>
+      <!-- 
+      <div class="content">
+        <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+      </div> 
+      -->
+
+
+      <div class="actions">
+        <div class="ui red cancel inverted button">
+          <i class="remove icon"></i>
+          Закрыть
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

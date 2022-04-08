@@ -1,0 +1,95 @@
+/* #element::-webkit-scrollbar {
+  width: 10px;
+}
+
+#element::-webkit-scrollbar-track {
+  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+}
+
+#element::-webkit-scrollbar-thumb {
+  background-color: #356184;
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    color-stop(0.5, rgba(255, 255, 255, 0.25)),
+    color-stop(0.5, transparent),
+    to(transparent)
+  );
+} */
+
+/* хром, сафари */
+.element::-webkit-scrollbar {
+  width: 0;
+}
+
+/* ie 10+ */
+.element {
+  -ms-overflow-style: none;
+}
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+.element {
+  overflow: -moz-scrollbars-none;
+}
+
+.menu,
+thead {
+  font-family: "Circe" !important;
+  font-size: 1.2em !important;
+  font-weight: 800 !important;
+}
+
+p,
+h3,
+h4,
+h5,
+h6,
+.button,
+.a,
+td,
+div.label,
+a.label {
+  font-family: "Circe" !important;
+  font-weight: 400 !important;
+}
+
+p,
+a.label {
+  font-size: 1.1em !important;
+}
+
+.header.divider {
+  font-size: 1.3em !important;
+}
+
+.header {
+  font-family: "Circe" !important;
+  font-weight: 700 !important;
+}
+
+h1.header {
+  font-family: "Circe" !important;
+  font-weight: 800 !important;
+}
+
+h2 {
+  font-family: "Circe" !important;
+  font-weight: 700 !important;
+}
+
+.m2 {
+  margin: 2em;
+}
+
+body.pushable > .pusher {
+  background-color: #4158d0 !important;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  ) !important;
+}
