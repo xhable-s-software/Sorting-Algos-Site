@@ -1,11 +1,11 @@
-name: env_tutorial
+name: main_workflow
 ## Triggers the workflow on when there is a push, or 
 ## pull request on the main branch
-on: [pull_request, push] 
+on: [pull_request, push]
 
 env:
   ## Sets environment variable
-  API_KEY: XXXXXXXXXXXX    
+  API_LOGIN: X1234X  
 
 jobs:
   job1:
