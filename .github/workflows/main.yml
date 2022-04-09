@@ -28,7 +28,4 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Print login
-        ## Another way reference your environment variables
         run: echo "The API login is: ${{ secrets.API_LOGIN }}"
-      - name: Print password
-        run: echo "The API pass is: ${{ secrets.API_PASS }}"
