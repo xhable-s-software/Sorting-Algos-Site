@@ -15,21 +15,24 @@ jobs:
     steps:
       - name: step 1
         ## Reference your environment variables
-        run: echo "The API key is:${{env.API_KEY}}"   
+        run: echo "The API key is:${{env.API_LOGIN}}"   
 
   job2:
     runs-on: self-hosted
     steps:
       - name: step 1
         ## Another way reference your environment variables
-        run: echo "The API key is:$API_KEY"
+        run: echo "The API key is:%API_LOGIN%"
   
   job3:
     runs-on: self-hosted
     steps:
       - name: Print login
-        ## Another way reference your environment variables
-        run: echo "The API login is:${{secrets.API_LOGIN}}"
+        run: echo "The API login is:${{ secrets.API_LOGIN }}"
+      - name: Set login
+        run: set API_LOGIN=${{ secrets.API_LOGIN }}
+      - name: Print env
+        run: echo "%API_LOGIN%"
 
   # job3:
   #   runs-on: self-hosted
