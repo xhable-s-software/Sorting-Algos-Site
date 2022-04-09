@@ -42,6 +42,7 @@ class Algorithm(models.Model):
     code_lines_count = models.IntegerField(
         'кол-во строк кода', name='code_lines_count')
     code = models.TextField('Код на Python', name='code')
+    description = models.TextField('Описание', name='description')
 
     class Meta:
         verbose_name = 'алгоритм сортировки'

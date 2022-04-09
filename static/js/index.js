@@ -47,22 +47,17 @@ $(document).ready(function ScrollTo() {
 });
 
 window.onload = function () {
-  // hljs.initHighlightingOnLoad();
-  $("table").tablesort(); // Make the table sortable.
-  // var tablesort = $("table").data("tablesort"); // Get a reference to it's tablesort instance
-  // $("div[data-gist]").ajaxgist();
+  $(".ui.dropdown").dropdown();
+  $("table").tablesort();
 
   // Обновление таблицы с помощью AJAX
   $(".selection").change(function () {
-    // alert(this.value);
+    var sort_percentage = document.getElementById("select_sort_percentage");
+    var item_count = document.getElementById("select_item_count");
 
     $.ajax({
       data: 0,
-      url:
-        "ajax/algos/" +
-        document.getElementsByClassName("selection")[1].value +
-        "/" +
-        document.getElementsByClassName("selection")[0].value,
+      url: "ajax/algos/" + item_count.value + "/" + sort_percentage.value,
       success: function (response) {
         $("tbody").replaceWith(response.table);
       },

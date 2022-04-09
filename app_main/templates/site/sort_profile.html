@@ -24,6 +24,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
 
   <!-- JS -->
+  <script src="{% static 'js/sort_profile.js' %}"></script>
   <script src="{% static 'js/index.js' %}"></script>
   <script src="{% static 'js/tablesort.js' %}"></script>
 
@@ -48,11 +49,15 @@
 </head>
 
 <body class="pushable">
+  <div class="ui dimmer">
+    <div class="ui loader"></div>
+  </div>
+
   <!-- Following Menu -->
   <div class="ui large top fixed hidden menu">
     <div class="ui container">
       <a class="header item" href="/#home" onclick="ScrollTo()">Главная</a>
-      <a class="item" href="#types" onclick="ScrollTo()">Типы сортировок</a>
+      <!-- <a class="header item" href="#types" onclick="ScrollTo()">Типы сортировок</a> -->
       <!-- <div class="right menu">
                 <div class="item">
                     <a class="ui primary button" href="#enrol" onclick="ScrollTo()">Записаться</a>
@@ -65,7 +70,7 @@
   <div class="ui vertical inverted sidebar menu">
     <a class="active item" href="/#home" onclick="ScrollTo()">Главная</a>
     <a class="item" href="#types" onclick="ScrollTo()">Типы сортировок</a>
-    <a class="item" href="#enrol" onclick="ScrollTo()">Записаться</a>
+    <a class="item" href="/#table" onclick="$('.dimmer').dimmer('show');">Таблица</a>
   </div>
 
 
@@ -78,8 +83,10 @@
           <a class="toc item">
             <i class="sidebar icon"></i>
           </a>
-          <a class="active item" href="/#home" onclick="ScrollTo()">Главная</a>
-          <a class="item" href="#types" onclick="ScrollTo()">Типы сортировок</a>
+          <a class="item" href="/#home" onclick="$('.dimmer').dimmer('show');">Главная</a>
+          <a class="active item" href="/profile/{{ algo.pk }}" onclick="$('.dimmer').dimmer('show');">
+            Сортировка «{{ algo.name }}»
+          </a>
           <!-- <div class="right item">
                         <a class="ui inverted button" href="#enrol" onclick="ScrollTo()">Записаться</a>
                     </div> -->
@@ -90,12 +97,13 @@
 
       <div class="ui container">
         <h1 class="ui inverted header">
-          {{ algo.name }}
+          Сортировка «{{ algo.name }}»
         </h1>
 
-        <div class="ui container">
-          <div class="ui three inverted statistics">
-            <div class="statistic">
+        <div class="ui stackable equal width grid">
+          <!-- <div class="ui three inverted statistics"> -->
+          <div class="column">
+            <div class="ui inverted statistic">
               <div class="value">
                 <i class="server icon"></i> {{ algo.item_count }}
               </div>
@@ -103,7 +111,9 @@
                 Элементов
               </div>
             </div>
-            <div class="statistic">
+          </div>
+          <div class="column">
+            <div class="ui inverted statistic">
               <div class="value">
                 <i class="clock icon"></i> {{algo.time }} мс
               </div>
@@ -111,7 +121,9 @@
                 время работы
               </div>
             </div>
-            <div class="statistic">
+          </div>
+          <div class="column">
+            <div class="ui inverted statistic">
               <div class="value">
                 <i class="sort numeric down icon"></i> {{ algo.sort_percentage }}%
               </div>
@@ -120,57 +132,42 @@
               </div>
             </div>
           </div>
+          <!-- </div> -->
         </div>
 
-        <h2 class="ui inverted header">Обзорная страница алгоритмов сортировки данных</h2>
-        <h4 class="ui inverted sub header">Згурский Евгений, Матвеев Сергей</h4>
-        <a class="ui huge primary button" href="#table" onclick="ScrollTo()">Перейти к таблице <i
-            class="right arrow icon"></i></a>
+        <h2 class="ui inverted header">Сложность: {{ algo.complexity }} </h2>
+        <h4 class="ui inverted sub header">Итераций: {{ algo.iter_count }} | Перестановок: {{ algo.replacements_count }}
+        </h4>
+        <a class="ui huge red button" href="/" onclick="$('.dimmer').dimmer('show');"><i class="home icon"></i>
+          Вернуться на
+          главную</a>
       </div>
     </div>
 
-    <a id="types"></a>
+    <!-- <a id="types"></a> -->
     <div class="ui hidden divider"></div>
 
     <div class="ui centered container">
       <div class="ui stackable two column grid container">
         <!-- Информация -->
+        <!-- <a id="info"></a> -->
         <div class="column">
           <div class="ui fluid card">
             <div class="content">
               <h2 class="icon header"><i class="info icon"></i> Информация</h2>
-              <!-- <a class="ui violet ribbon label">{{ algo.item_count }} элементов<br>{{ algo.sort_percentage }}%
-              отсортировано</a> -->
-              <!-- <div class="ui top right attached label"><i class="python big icon"></i></div> -->
               <p>
-                Метод пузырька (сортировка пузырьком, Bubble sort) является, пожалуй, наиболее распространенным
-                алгоритмом сортировки
-                данных обменами в массиве.
-                Название этого метода пошло от аналогии с поднимающимся пузырьком. На своем пути он проходит все слои,
-                каждый элемент,
-                что и применяется в этом алгоритме. Сам метод предполагает проход массива снизу вверх и сравнение
-                ближайших элементов.
-                Если какие-то из проверенных элементов массива находятся не в правильной последовательности, то меняем
-                их местами и
-                продолжаем сравнивать дальше.
-              </p>
-              <p>
-                Так как на прохождение всего массива требуется очень много времени, то можно заключить, что алгоритм
-                пузырька очень
-                медленен и малоэффективен. Тем не менее, он все же имеет плюс: его можно легко улучшать за счет его
-                простоты.
+                {{ algo.description }}
               </p>
             </div>
           </div>
         </div>
 
         <!-- Код -->
+        <!-- <a id="code"></a> -->
         <div class="column">
           <div class="ui fluid card">
             <div class="content">
-              <h2 class="icon header"><i class="code icon"></i> Код</h2>
-              <!-- <a class="ui violet ribbon label">{{ algo.item_count }} элементов<br>{{ algo.sort_percentage }}%
-                      отсортировано</a> -->
+              <h2 class="icon header"><i class="code icon"></i> Код (строк: {{ algo.code_lines_count }})</h2>
               <div class="ui top right attached label"><i class="python big icon"></i></div>
 
               <div class="scrollable content">
@@ -183,6 +180,8 @@
       </div>
     </div>
 
+
+    <br><br><br><br><br><br>
   </div>
 
 </body>

@@ -51,7 +51,7 @@ def ajax_algos(request, item_count, sort_percentage):
         item_count=item_count, sort_percentage=sort_percentage)
 
     tbody = ""
-
+    print(algos, len(algos))
     for algo in algos:
         tbody += '<tr>'
         # tbody += f'<td>{algo.name}</td>'
@@ -69,6 +69,8 @@ def ajax_algos(request, item_count, sort_percentage):
         tbody += f'<td>{algo.replacements_count}</td>'
         tbody += f'<td>{algo.code_lines_count}</td>'
         tbody += '</tr>'
+
+    print(tbody)
 
     table = f"""
     <tbody>

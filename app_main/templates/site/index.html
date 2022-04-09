@@ -49,11 +49,15 @@
 </head>
 
 <body class="pushable">
+  <div class="ui dimmer">
+    <div class="ui loader"></div>
+  </div>
   <!-- Following Menu -->
   <div class="ui large top fixed hidden menu">
     <div class="ui container">
       <a class="header item" href="#home" onclick="ScrollTo()">Главная</a>
       <a class="item" href="#types" onclick="ScrollTo()">Типы сортировок</a>
+      <a class="item" href="#table" onclick="ScrollTo()">Сводная таблица</a>
       <!-- <div class="right menu">
                 <div class="item">
                     <a class="ui primary button" href="#enrol" onclick="ScrollTo()">Записаться</a>
@@ -66,7 +70,7 @@
   <div class="ui vertical inverted sidebar menu">
     <a class="active item" href="#home" onclick="ScrollTo()">Главная</a>
     <a class="item" href="#types" onclick="ScrollTo()">Типы сортировок</a>
-    <a class="item" href="#enrol" onclick="ScrollTo()">Записаться</a>
+    <a class="item" href="#table" onclick="ScrollTo()">Сводная таблица</a>
   </div>
 
 
@@ -81,7 +85,15 @@
             <i class="sidebar icon"></i>
           </a>
           <a class="active item" href="#home" onclick="ScrollTo()">Главная</a>
-          <a class="item" href="#types" onclick="ScrollTo()">Типы сортировок</a>
+          <div class="ui dropdown item">
+            Перейти
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <a class="item" href="#types" onclick="ScrollTo()">Типы сортировок</a>
+              <a class="item" href="#table" onclick="ScrollTo()">Сводная таблица</a>
+            </div>
+          </div>
+          <!-- <a class="item" href="#types" onclick="ScrollTo()">Типы сортировок</a> -->
           <!-- <div class="right item">
                 <a class="ui inverted button" href="#enrol" onclick="ScrollTo()">Записаться</a>
             </div> -->
@@ -192,7 +204,8 @@
           {% for algo in algos %}
           <tr>
             <td>
-              <a class="" algo_name="{{ algo.name }}" href="/profile/{{ algo.pk }}">{{ algo.name }}</a>
+              <a class="" algo_name="{{ algo.name }}" href="/profile/{{ algo.pk }}"
+                onclick="$('.dimmer').dimmer('show');">{{ algo.name }}</a>
               <!-- <div class="ui animated fade fluid basic violet button algo_name_link" algo_name="{{ algo.name }}"
                 tabindex="0">
                 <div class="visible content">{{ algo.name }}</div>

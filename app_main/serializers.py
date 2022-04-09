@@ -19,4 +19,5 @@ class AlgorithmSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Algorithm
         fields = ['url', 'name', 'type', 'complexity', 'sort_percentage',
-                  'item_count', 'time', 'iter_count', 'replacements_count', 'code_lines_count', 'code']
+                  'item_count', 'time', 'iter_count', 'replacements_count',
+                  'code_lines_count', 'code', 'description']
