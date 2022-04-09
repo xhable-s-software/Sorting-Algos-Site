@@ -11,14 +11,14 @@ jobs:
   job1:
     ## The type of runner that the job will run on, 
     ## here it runs on ubuntu latest
-    runs-on: ubuntu-latest 
+    runs-on: self-hosted
     steps:
       - name: step 1
         ## Reference your environment variables
         run: echo "The API key is:${{env.API_KEY}}"   
 
   job2:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: step 1
         ## Another way reference your environment variables
