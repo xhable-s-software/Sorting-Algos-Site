@@ -23,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'y%n!3^_am=)jlkv5#k&6u8-wsvgxgx(b&5#c#kg91*d@7!b_)d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['sorting.zgursky.tk', '127.0.0.1', 'localhost']
+CSRF_TRUSTED_ORIGINS = ["http://sorting.zgursky.tk", "https://sorting.zgursky.tk"]
 
 
 # Application definition
