@@ -23,8 +23,15 @@ jobs:
       - name: step 1
         ## Another way reference your environment variables
         run: echo "The API key is:$API_KEY"
+  
+  job3:
+    runs-on: self-hosted
+    steps:
+      - name: Print login
+        ## Another way reference your environment variables
+        run: echo "The API login is:${{secrets.API_LOGIN}}"
 
-  # check_logpass:
+  # job3:
   #   runs-on: self-hosted
   #   steps:
   #     - name: Print login
