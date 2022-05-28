@@ -25,8 +25,10 @@ SECRET_KEY = 'y%n!3^_am=)jlkv5#k&6u8-wsvgxgx(b&5#c#kg91*d@7!b_)d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['sorting.zgursky.tk', '127.0.0.1', 'localhost']
-CSRF_TRUSTED_ORIGINS = ["http://sorting.zgursky.tk", "https://sorting.zgursky.tk"]
+ALLOWED_HOSTS = ['sorting.zgursky.tk',
+                 '127.0.0.1', 'localhost', '192.168.55.108']
+CSRF_TRUSTED_ORIGINS = [
+    "http://sorting.zgursky.tk", "https://sorting.zgursky.tk"]
 
 
 # Application definition
@@ -123,8 +125,9 @@ USE_TZ = True
 # STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATIC_ROOT = ''
+# STATIC_ROOT = ''
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (os.path.join('static'), )
+# STATICFILES_DIRS = (os.path.join('static'), )

@@ -26,8 +26,11 @@ jobs:
   
   job3:
     runs-on: self-hosted
+    env:
+      API_LOGIN: ${{ secrets.API_LOGIN }}
     steps:
       - name: Print login
+        shell: cmd 
         run: echo "The API login is:${{ secrets.API_LOGIN }}"
       - name: Set login
         run: set API_LOGIN=${{ secrets.API_LOGIN }}
