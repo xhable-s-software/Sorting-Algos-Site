@@ -42,8 +42,12 @@ def index(request):
 
 
 def sort_profile(request, pk: int):
-    algo = Algorithm.objects.get(pk=pk)
-    return render(request, 'site/sort_profile.html', {'algo': algo})
+    algo: Algorithm = Algorithm.objects.get(pk=pk)
+    if '(' in algo.name:
+        language = 'C++'
+    else:
+        language = 'Python'
+    return render(request, 'site/sort_profile.html', {'algo': algo, 'language': language})
 
 
 def ajax_algos(request, item_count, sort_percentage):

@@ -168,10 +168,15 @@
           <div class="ui fluid card">
             <div class="content">
               <h2 class="icon header"><i class="code icon"></i> Код (строк: {{ algo.code_lines_count }})</h2>
-              <div class="ui top right attached label"><i class="python big icon"></i></div>
-
+              <div class="ui top right attached label">
+                {% if language == "Python" %}
+                <i class="python big icon"></i>
+                {% else %}
+                <h3 class="ui header">C++</h3>
+                {% endif %}
+              </div>
               <div class="scrollable content">
-                <pre><code class="python">{{ algo.code }}</code></pre>
+                <pre><code class="{{ language }}">{{ algo.code }}</code></pre>
               </div>
               <script>hljs.highlightAll();</script>
             </div>
