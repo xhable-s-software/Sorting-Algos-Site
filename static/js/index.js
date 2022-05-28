@@ -15,6 +15,13 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  $(function () {
+    $("table.sortable")
+      .tablesort()
+      .data("tablesort")
+      .sort($("th.default-sort"));
+  });
+
   $(".algo_name_link").click(function () {
     $.ajax({
       data: 0,
@@ -65,10 +72,11 @@ window.onload = function () {
         console.log(response.responseJSON.errors);
         alert(response.responseJSON.errors);
       },
-    });
-
-    $(function () {
-      $("table.sortable").tablesort().data("tablesort").sort($("th"));
+    }).then(function () {
+      $("table.sortable")
+        .tablesort()
+        .data("tablesort")
+        .sort($("th.default-sort"));
     });
 
     return false;

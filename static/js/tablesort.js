@@ -126,11 +126,11 @@
     desc: "sorted descending",
     compare: function (a, b) {
       if (!isNaN(a)) {
-        a = Math.floor(a);
+        a = parseFloat(a);
         // console.log("a is num");
       }
       if (!isNaN(b)) {
-        b = Math.floor(b);
+        b = parseFloat(b);
         // console.log("b is num");
       }
       if (a > b) {

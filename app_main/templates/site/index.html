@@ -206,7 +206,7 @@
         <thead>
 
           <tr>
-            <th>Название</th>
+            <th class="default-sort">Название</th>
             <th>Тип</th>
             <th>Сложность</th>
             <th>Время работы, мс</th>
@@ -231,7 +231,7 @@
             </td>
             <td>{{ algo.type }}</td>
             <td>{{ algo.complexity }}</td>
-            <td>{{ algo.time }}</td>
+            <td>{{ algo.time|stringformat:".3f" }}</td>
             <td>{{ algo.iter_count }}</td>
             <td>{{ algo.replacements_count }}</td>
             <td>{{ algo.code_lines_count }}</td>

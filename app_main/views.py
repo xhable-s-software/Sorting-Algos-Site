@@ -51,7 +51,7 @@ def sort_profile(request, pk: int):
 
 
 def ajax_algos(request, item_count, sort_percentage):
-    algos = Algorithm.objects.filter(
+    algos: list[Algorithm] = Algorithm.objects.filter(
         item_count=item_count, sort_percentage=sort_percentage)
 
     tbody = ""
@@ -68,7 +68,7 @@ def ajax_algos(request, item_count, sort_percentage):
 
         tbody += f'<td>{algo.type}</td>'
         tbody += f'<td>{algo.complexity}</td>'
-        tbody += f'<td>{algo.time}</td>'
+        tbody += f'<td>{round(algo.time, 3)}</td>'
         tbody += f'<td>{algo.iter_count}</td>'
         tbody += f'<td>{algo.replacements_count}</td>'
         tbody += f'<td>{algo.code_lines_count}</td>'
