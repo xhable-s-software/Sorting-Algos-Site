@@ -1,0 +1,674 @@
+[
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 0,
+        "time": 0.18410000205039978
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 0,
+        "time": 0.14309999346733093
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 0,
+        "time": 0.14409999549388885
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 10,
+        "time": 0.1469999998807907
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 10,
+        "time": 0.1316000074148178
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 10,
+        "time": 0.14219999313354492
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 25,
+        "time": 0.13109999895095825
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 25,
+        "time": 0.11659999936819077
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 25,
+        "time": 0.1412000060081482
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 33,
+        "time": 0.12030000239610672
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 33,
+        "time": 0.10499999672174454
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 33,
+        "time": 0.14159999787807465
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 50,
+        "time": 0.10660000145435333
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 50,
+        "time": 0.09120000153779984
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 50,
+        "time": 0.15459999442100525
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 75,
+        "time": 0.07720000296831131
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 75,
+        "time": 0.06520000100135803
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 75,
+        "time": 0.13840000331401825
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 90,
+        "time": 0.06419999897480011
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 90,
+        "time": 0.050599999725818634
+    },
+    {
+        "item_count": 500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 90,
+        "time": 0.13729999959468842
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 0,
+        "time": 0.3488999903202057
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 0,
+        "time": 0.29280000925064087
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 0,
+        "time": 0.3158000111579895
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 10,
+        "time": 0.31040000915527344
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 10,
+        "time": 0.27570000290870667
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 10,
+        "time": 0.30309998989105225
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 25,
+        "time": 0.2922999858856201
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 25,
+        "time": 0.2531000077724457
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 25,
+        "time": 0.2994000017642975
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 33,
+        "time": 0.25459998846054077
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 33,
+        "time": 0.3513000011444092
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 33,
+        "time": 0.3050000071525574
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 50,
+        "time": 0.2305999994277954
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 50,
+        "time": 0.18870000541210175
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 50,
+        "time": 0.2962000072002411
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 75,
+        "time": 0.17579999566078186
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 75,
+        "time": 0.14339999854564667
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 75,
+        "time": 0.2939000129699707
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 90,
+        "time": 0.14659999310970306
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 90,
+        "time": 0.1046999990940094
+    },
+    {
+        "item_count": 1000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 90,
+        "time": 0.30219998955726624
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 0,
+        "time": 0.9855999946594238
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 0,
+        "time": 0.8497999906539917
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 0,
+        "time": 0.8813999891281128
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 10,
+        "time": 0.9337000250816345
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 10,
+        "time": 0.7688000202178955
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 10,
+        "time": 0.8246999979019165
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 25,
+        "time": 0.8442000150680542
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 25,
+        "time": 0.6776000261306763
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 25,
+        "time": 0.8149999976158142
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 33,
+        "time": 0.7706000208854675
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 33,
+        "time": 0.6450999975204468
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 33,
+        "time": 0.9176999926567078
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 50,
+        "time": 0.6445000171661377
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 50,
+        "time": 0.5342000126838684
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 50,
+        "time": 0.8184000253677368
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 75,
+        "time": 0.5232999920845032
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 75,
+        "time": 0.38659998774528503
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 75,
+        "time": 0.8075000047683716
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 90,
+        "time": 0.46650001406669617
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 90,
+        "time": 0.31940001249313354
+    },
+    {
+        "item_count": 2500,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 90,
+        "time": 0.7997000217437744
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 0,
+        "time": 2.225800037384033
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 0,
+        "time": 1.7359000444412231
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 0,
+        "time": 1.7681000232696533
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 10,
+        "time": 2.21560001373291
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 10,
+        "time": 1.62090003490448
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 10,
+        "time": 1.7446000576019287
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 25,
+        "time": 1.817199945449829
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 25,
+        "time": 1.4316999912261963
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 25,
+        "time": 1.7300000190734863
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 33,
+        "time": 1.6815999746322632
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 33,
+        "time": 1.3274999856948853
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 33,
+        "time": 1.8396999835968018
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 50,
+        "time": 1.447700023651123
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 50,
+        "time": 1.1210999488830566
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 50,
+        "time": 1.7285000085830688
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 75,
+        "time": 1.1323000192642212
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 75,
+        "time": 0.8222000002861023
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 75,
+        "time": 1.7036000490188599
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_sort",
+        "replacements_count": 0,
+        "sort_percentage": 90,
+        "time": 0.9736999869346619
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_stable_sort",
+        "replacements_count": 0,
+        "sort_percentage": 90,
+        "time": 0.6561999917030334
+    },
+    {
+        "item_count": 5000,
+        "iter_count": 0,
+        "name": "_heap_sort",
+        "replacements_count": 0,
+        "sort_percentage": 90,
+        "time": 1.6964000463485718
+    }
+]

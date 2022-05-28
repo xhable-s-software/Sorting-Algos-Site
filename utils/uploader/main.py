@@ -5,7 +5,7 @@
 
 Сортировки вставками (сортировка простыми вставками, метод Шелла)
 """
-from time import time
+from time import monotonic as time
 from random import randint
 import requests
 from models import Algorithm, Data, Sorted
@@ -31,7 +31,7 @@ def bubble(raw_data: Data):
 
         iter_count += 1
 
-    work_time = round((time() - start_time) * 1000, 3)
+    work_time = (time() - start_time) * 1000
     return Sorted(algorithm, raw_data, data, work_time, iter_count, replacements_count)
 
 
@@ -63,7 +63,7 @@ def odd_even(raw_data: Data):
                 isSorted = 0
             iter_count += 1
 
-    work_time = round((time() - start_time) * 1000, 3)
+    work_time = (time() - start_time) * 1000
     return Sorted(algorithm, raw_data, data, work_time, iter_count, replacements_count)
 
 
@@ -84,7 +84,7 @@ def selection(raw_data: Data):
         replacements_count += 1
         iter_count += len(range(i, len(data)))
 
-    work_time = round((time() - start_time) * 1000, 3)
+    work_time = (time() - start_time) * 1000
     return Sorted(algorithm, raw_data, data, work_time, iter_count, replacements_count)
 
 
@@ -126,7 +126,7 @@ def bingo(raw_data: Data):
             max -= 1
             iter_count += 1
 
-    work_time = round((time() - start_time) * 1000, 3)
+    work_time = (time() - start_time) * 1000
     return Sorted(algorithm, raw_data, data, work_time, iter_count, replacements_count)
 
 
@@ -184,7 +184,7 @@ def heap_sort(raw_data: Data):
         replacements_count += 1
         replacements_count += heapify(data, i, 0)
 
-    work_time = round((time() - start_time) * 1000, 3)
+    work_time = (time() - start_time) * 1000
     return Sorted(algorithm, raw_data, data, work_time, iter_count, replacements_count)
 
 
@@ -225,7 +225,7 @@ def merge_sort(raw_data: Data, data=None, replacements_count: int = 0, iter_coun
     # print(data)
     n = len(data)
     if n <= 1:
-        work_time = round((time() - start_time) * 1000, 3)
+        work_time = (time() - start_time) * 1000
         return Sorted(algorithm, raw_data, data, work_time,
                       iter_count, replacements_count)
     else:
@@ -235,7 +235,7 @@ def merge_sort(raw_data: Data, data=None, replacements_count: int = 0, iter_coun
         right = merge_sort(raw_data, data[middle:],
                            replacements_count, iter_count, start_time)
 
-        work_time = round((time() - start_time) * 1000, 3)
+        work_time = (time() - start_time) * 1000
 
         data, iter_inc, replacements_inc = merge(
             left.sorted_data, right.sorted_data)
@@ -266,7 +266,7 @@ def insertion(raw_data: Data):
         data[j + 1] = key
         iter_count += 1
 
-    work_time = round((time() - start_time) * 1000, 3)
+    work_time = (time() - start_time) * 1000
     return Sorted(algorithm, raw_data, data, work_time, iter_count, replacements_count)
 
 
@@ -289,7 +289,7 @@ def shell(raw_data: Data):
             iter_count += 1
         inc = 1 if inc == 2 else int(inc * 5.0 / 11)
 
-    work_time = round((time() - start_time) * 1000, 3)
+    work_time = (time() - start_time) * 1000
     return Sorted(algorithm, raw_data, data, work_time, iter_count, replacements_count)
 
 
@@ -310,7 +310,7 @@ def generate_data(sort_percentage: int, item_count: int):
 
 
 def add_algo_results(result: Sorted):
-    api_url = "http://localhost:8000/api/algorithms/"
+    api_url = "https://sorting.zgursky.tk/api/algorithms/"
     response = requests.post(
         api_url,
         json={
@@ -328,14 +328,15 @@ def add_algo_results(result: Sorted):
         },
         auth=('api_worker', '1qa2ws3edZxc!')
     )
+    return response
 
 
 def mass_upload():
     percents = [0, 10, 25, 33, 50, 75, 90]
     item_counts = [500, 1000, 2500, 5000]
     datasets: list[Data] = []
-    # fn_algos = [bubble, odd_even, selection, bingo, insertion, shell]
-    fn_algos = [merge_sort]
+    fn_algos = [bubble, odd_even, selection,
+                bingo, insertion, shell, heap_sort, merge_sort]
 
     for percent in percents:
         for item_count in item_counts:
@@ -350,7 +351,8 @@ def mass_upload():
                 f"Добавлено: {algo.__name__} ({dataset.item_count}/{dataset.sort_percentage}%).")
 
 
-mass_upload()
+if __name__ == "__main__":
+    mass_upload()
 
 
 # add_algo_results(bingo(generate_data(33, 2500)))
